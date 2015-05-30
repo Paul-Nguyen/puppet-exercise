@@ -2,13 +2,13 @@
 This deploys the puppetlabs-exercise page via nginx on port 8000.
 
 ## Assumptions
-This is a vagrantbox using puppetlab's vagrantbox for puppet-installed Centos7. If you run it elsewhere, you will need to open a firewall hole - if you run firewalld on Centos7/RHEL7, this will open a hole for you in the public zone. Other linux flavours may also put their nginx directories somewhere else, so you may need to manage where the exercise page gets copied to.
+This is a vagrantbox using puppetlab's vagrantbox for puppet-installed Centos7. If you run it elsewhere, you will need to open a firewall hole - if you run firewalld on Centos7/RHEL7, this will open a hole for you in the public zone. Other linux flavours may also put their nginx directories somewhere else, so you may need to manage where the exercise page gets copied to (see below).
 
 We're assuming that the content to be served via 8000 TCP is not SSL-protected.
 
 We're also assuming that the box has external access, we're using HTTPS over 443 to pull the pages in.
 
-And another assumption is that if you're not on a Vagrant box, you don't mind it clobbering your selinux config. This is because port 8000 
+And another assumption is that if you're not on a Vagrant box, you don't mind it clobbering your selinux config. This is because port 8000 is used by a sound device and we may not want to overwrite the config to enable that port in selinux for the web context. 
 
 ## How to use it
 This is meant for a vagrant setup. If you're running vagrant, just do:
