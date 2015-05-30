@@ -6,7 +6,7 @@ This is a vagrantbox using puppetlab's vagrantbox for puppet-installed Centos7. 
 
 We're assuming that the content to be served via 8000 TCP is not SSL-protected.
 
-We're also assuming that the box has external access, we're using HTTPS over 443 to pull the pages in.
+We're also assuming that the box has external access to the internet (to grab the exercise repo and puppet modules), we're using HTTPS over 443 to pull the pages in.
 
 And another assumption is that if you're not on a Vagrant box, you don't mind it clobbering your selinux config. This is because port 8000 is used by a sound device and we may not want to overwrite the config to enable that port in selinux for the web context. 
 
