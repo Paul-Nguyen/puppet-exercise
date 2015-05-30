@@ -13,6 +13,7 @@ And another assumption is that if you're not on a Vagrant box, you don't mind it
 ## How to use it
 This is meant for a vagrant setup. If you're running vagrant, just do:
 > vagrant up
+
 You should be able to view the content at http://localhost:8000.
 
 Otherwise, the steps are:
