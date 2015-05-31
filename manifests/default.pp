@@ -40,5 +40,7 @@ case $::osfamily {
                             port     => $exercise_port,
                           },
                 action => 'accept',
+            }
         }
     }
+}
