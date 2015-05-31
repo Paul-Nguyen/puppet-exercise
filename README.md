@@ -28,12 +28,14 @@ To deploy to different ports or directories, configure the corresponding variabl
 
 ## How to customise it
 Three basic configuration options are available for tweaking:
->$webpage_root  = '/usr/share/nginx/html/puppet-exercise'
->$exercise_port = 8000
->$exercise_src  = 'https://github.com/puppetlabs/exercise-webpage.git'
+```
+$webpage_root  = '/usr/share/nginx/html/puppet-exercise'
+$exercise_port = 8000
+$exercise_src  = 'https://github.com/puppetlabs/exercise-webpage.git'
+```
 
-'''$webpage_root''' may be tweaked depending on your preferred directory for deployment.
+***$webpage_root*** may be tweaked depending on your preferred directory for deployment.
 
-'''$exercise_port''' is set to 8000 for the sake of this exercise.
+***$exercise_port*** is set to 8000 for the sake of this exercise.
 
-'''$exercise_src''' is set to the https URL of the specified page. SSH outside of some organisations is blocked so git:// is less likely to work out of the box.
+***$exercise_src*** is set to the https URL of the specified page. SSH outside of some organisations is blocked so git:// is less likely to work out of the box.
