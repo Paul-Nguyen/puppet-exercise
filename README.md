@@ -16,7 +16,7 @@ This is meant for a vagrant setup. If you're running vagrant, just clone/export 
 
 You should be able to view the content at http://localhost:8000.
 
-Otherwise, the steps are:
+Otherwise, the steps (on a box with puppet installed) are:
 - gem install r10k
 - (for below, $PUPPET_EXERCISE is where you've pulled in this directory)
 - sudo PUPPETFILE=/$PUPPET_EXERCISE/Puppetfile PUPPETFILE_DIR=/etc/puppet/modules /usr/local/bin/r10k puppetfile install
