@@ -29,13 +29,16 @@ vcsrepo { $webpage_root:
     source   => $exercise_src,
     revision => 'master',
 }
-
-firewalld_rich_rule { 'puppet exercise public port':
-    ensure => present,
-    zone   => 'public',
-    port   => {
-                protocol => tcp,
-                port     => $exercise_port,
-              },
-    action => 'accept',
-}
+case $::osfamily {
+    'RedHat': {
+        if ($::operatingsystem in ['RedHat', 'CentOS'] and $::operatingsystemmajrelease in ['7']) {
+            firewalld_rich_rule { 'puppet exercise public port':
+                ensure => present,
+                zone   => 'public',
+                port   => {
+                            protocol => tcp,
+                            port     => $exercise_port,
+                          },
+                action => 'accept',
+        }
+    }
