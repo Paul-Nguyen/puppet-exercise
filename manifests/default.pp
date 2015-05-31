@@ -24,7 +24,7 @@ nginx::resource::vhost { 'puppet-nginxercise':
     listen_port => $exercise_port,
 } ->
 vcsrepo { $webpage_root:
-    ensure   => present,
+    ensure   => latest,
     provider => git,
     source   => $exercise_src,
     revision => 'master',
